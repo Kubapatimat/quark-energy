@@ -17,7 +17,7 @@ https://quark-energy.netlify.app
 Available fields:
 - `quark.x`: returns the x component of position
 - `quark.y`: returns the y component of position
-- `quark.angle`: returns the angle between the x-axis and the vector
+- `quark.angle`: returns the angle in degrees between the x-axis and the vector
 
 Available custom functions:
 - `radians(degrees)`: converts the angle given in degrees to radians
