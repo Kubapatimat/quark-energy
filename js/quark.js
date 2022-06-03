@@ -30,7 +30,7 @@ class Quark {
     const quark_arrow_origin = new Konva.Circle({
       x: 0,
       y: 0,
-      radius: 5,
+      radius: 4,
       fill: "black",
       name: "quark"
     })
@@ -41,6 +41,13 @@ class Quark {
 
     this.group.on("transform dragmove", (e) => updateCallback(e, this.group));
     this.group.on("click tap", (e) => clickCallback(e, this.group));
+    this.group.on("dragend", (e) => {
+      this.group.position({
+        x: Math.round(this.group.x() / 25) * 25,
+        y: Math.round(this.group.y() / 25) * 25
+      });
+      updateCallback(e, this.group);
+    })
 
     return this.group;
   }
