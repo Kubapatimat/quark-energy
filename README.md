@@ -1,6 +1,9 @@
 # quark-energy
 Explore how the energy of the quarks changes in different models.
 
+## Demo
+https://quark-energy.netlify.app
+
 ## Controls
 - Left mouse button: select one quark
 - Left mouse button + CTRL/SHIFT: add/remove from selection
