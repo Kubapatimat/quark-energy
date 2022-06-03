@@ -49,8 +49,7 @@ class TextLayer {
     });
 
     const mod = (m, n) => ((m % n) + n) % n
-
-    energyText.setAttr("text", `Pozycja: (${formatter.format(selectedQuark.x())}, ${formatter.format(selectedQuark.y())}), rotacja: ${formatter.format(mod(-selectedQuark.rotation() + 90, 360))}`);
+    energyText.setAttr("text", `Pozycja: (${formatter.format(selectedQuark.x())}, ${formatter.format(selectedQuark.y())}), rotacja: ${formatter.format(mod(-selectedQuark.rotation() + 90, 360))}, skala: ${formatter.format(selectedQuark.scaleX())}`);
     this.layer.draw();
   }
 }

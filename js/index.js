@@ -22,7 +22,7 @@ function (quarks) {
 `
 
 
-const quarks_decorator = (quarks) => quarks.map(quark => ({x: quark.x(), y: quark.y(), angle: quark.rotation()}))
+const quarks_decorator = (quarks) => quarks.map(quark => ({x: quark.x(), y: quark.y(), angle: quark.rotation(), scale: quark.scaleX()}))
 let energy_lambda = new Function("const radians = (degrees) => degrees * Math.PI / 180; let fn = " + energyFunctionTextarea.value + "; return fn")()
 let energy = (quarks) => energy_lambda(quarks_decorator(quarks))
 
